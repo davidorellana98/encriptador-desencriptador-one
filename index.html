@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>Challenge | Encriptador y Desencriptador</title>
+	<link rel="stylesheet" href="reset.css">
+	<link rel="stylesheet" href="style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat:wght@300&display=swap" rel="stylesheet">
+	<script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+	<header>
+		<img class="logo" alt="Logo Alura y Oracle" src="imagenes/logo.png">
+	</header>
+
+	<main>
+		<section>
+			<textarea class="text-area" id="texto-encriptado" cols="50" rows="10" placeholder="¡Ingrese el texto aquí, por favor!"></textarea>
+
+			<div>
+				<h5 class="informacion">&#x1F6C8;¡Solo permite el ingreso de letras minúsculas y sin acentos especiales!</h5>
+			</div>
+
+			<div class="botones">
+				<button class="btn-encriptar" id="boton-encriptado">Encriptar</button>
+
+				<button class="btn-desencriptar" id="boton-desencriptado">Desencriptar</button>
+			</div>
+		</section>
+
+		<section>
+			<textarea class="mensaje-encriptado" id="texto-desencriptado" cols="20" rows="10"></textarea>
+
+			<div>
+				<button class="btn-copiar" id="boton-copiar">Copiar</button>
+			</div>
+		</section>
+	</main>
+
+</body>
+
+<script>
+	var btnEncriptar = document.querySelector("#boton-encriptado");
+	btnEncriptar.onclick = encriptarTexto;	
+
+	var btnDesencriptar = document.querySelector("#boton-desencriptado");
+	btnDesencriptar.onclick = desencriptarTexto;
+
+	var btnCopiar = document.querySelector("#boton-copiar");
+	btnCopiar.onclick = copiarTexto;	
+</script>
+
+</html>
